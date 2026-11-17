@@ -35,6 +35,14 @@ namespace WinMan
         IWorkspace Workspace { get; }
 
         /// <summary>
+        /// A stable identifier for the physical display (for example the
+        /// Windows device ID). The same monitor reports the same value
+        /// across sleep/wake and across Win32Display instances, so it can
+        /// be used to recognise a display that was removed and added again.
+        /// </summary>
+        string DeviceID { get; }
+
+        /// <summary>
         /// The current work area.
         /// </summary>
         Rectangle WorkArea { get; }
